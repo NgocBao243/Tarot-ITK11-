@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <img></img>
+    <title>Web Bói Bài Tarot</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Chào mừng đến với Web Bói Bài Tarot!</h1>
+    <h1>Hãy chọn lĩnh vực bạn muốn bói :</h1>
+    <div>
+      <label for="selectOption">Chọn một lựa chọn:</label>
+      <select id="selectOption" onchange="handleChange(event)">
+        <option value="option3">Lựa chọn </option>
+        <option value="option1">Tình Duyên </option>
+        <option value="option2">Học Tập </option>
+      </select>
+    </div>
+  
+    <script src="script.js"></script>
+    <script>
+      function handleChange(event) {
+        const selectedOption = event.target.value;
+        if (selectedOption === 'option1') {
+          window.location.href = '/tarot';
+        }
+        if (selectedOption === 'option2') {
+          window.location.href = '/tarot2';
+        }
+      }
+    </script>
+
+</body>
+</html>
